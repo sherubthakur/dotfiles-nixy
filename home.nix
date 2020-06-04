@@ -1,5 +1,12 @@
 { config, lib, pkgs, ... }:
 
+let
+  ls-colors = pkgs.runCommand "ls-colors" {} ''
+    mkdir -p $out/bin
+    ln -s ${pkgs.coreutils}/bin/ls $out/bin/ls
+    ln -s ${pkgs.coreutils}/bin/dircolors $out/bin/dircolors
+  '';
+in
 {
   home.packages = with pkgs; [
     # _1password
@@ -14,6 +21,8 @@
     # google-chrome
     jump
     htop
+    # NOTE: custom
+    ls-colors
     ngrok
     ripgrep
     nodejs
@@ -162,6 +171,7 @@
       bindkey -M vicmd 'j' history-beginning-search-forward
 
       eval "$(jump shell)"
+      alias ls="ls --color=auto -F"
     '';
     loginExtra = ''
       ${builtins.readFile ./zsh_prompt.zsh}
