@@ -87,10 +87,7 @@ in
 
     plugins = with pkgs.vimPlugins; [
       # Appearance
-      # lightline-vim
       vim-airline
-      # gruvbox
-      # onehalf
       vim-one
       vim-devicons
 
