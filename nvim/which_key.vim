@@ -1,6 +1,3 @@
-" Register which key map
-call which_key#register('<Space>', "g:which_key_map")
-
 " Map leader to which_key
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
@@ -134,3 +131,7 @@ let g:which_key_map.l = {
             \ 'z' : [':CocDisable'                         , 'disable CoC'],
             \ 'Z' : [':CocEnable'                          , 'enable CoC'],
             \ }
+
+
+" Register which key map
+autocmd VimEnter * call which_key#register('<Space>', "g:which_key_map")
