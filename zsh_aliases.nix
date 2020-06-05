@@ -44,5 +44,11 @@
   sudo="sudo ";
   fucking="sudo ";
   holdmybeer="sudo ";
+
+  # Serve a folder
   servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'";
+
+  # system monitoring
+  top="ytop";
+  htop="ytop";
 }

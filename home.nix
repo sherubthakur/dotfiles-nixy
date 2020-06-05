@@ -16,11 +16,11 @@ in
     clojure
     clojure-lsp
     docker
+    docker-compose
     git
     fzf
     # google-chrome
     jump
-    htop
     # NOTE: custom
     ls-colors
     ngrok
@@ -44,6 +44,7 @@ in
     tmux
     universal-ctags
     zsh-syntax-highlighting
+    ytop
   ];
 
   # Let Home Manager install and manage itself.
