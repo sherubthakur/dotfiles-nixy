@@ -21,6 +21,7 @@ in
     clojure-lsp
     docker
     docker-compose
+    elmPackages.elm-language-server
     git
     (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
     fzf
