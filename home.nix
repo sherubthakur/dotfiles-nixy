@@ -153,7 +153,7 @@ in
     enableCompletion = true;
     defaultKeymap = "viins";
     enableAutosuggestions = true;
-    shellAliases = (import ./zsh_aliases.nix);
+    shellAliases = (import ./zsh/aliases.nix);
     history.extended = true;
     plugins = [
       {
@@ -169,8 +169,8 @@ in
     oh-my-zsh = {
     };
     initExtraBeforeCompInit = ''
-      ${builtins.readFile ./zsh_functions.zsh}
-      ${builtins.readFile ./zsh_secrets.zsh}
+      ${builtins.readFile ./zsh/functions.zsh}
+      ${builtins.readFile ./zsh/secrets.zsh}
 
       bindkey -M vicmd 'k' history-beginning-search-backward
       bindkey -M vicmd 'j' history-beginning-search-forward
@@ -179,7 +179,7 @@ in
       alias ls="ls --color=auto -F"
     '';
     loginExtra = ''
-      ${builtins.readFile ./zsh_prompt.zsh}
+      ${builtins.readFile ./zsh/prompt.zsh}
     '';
     sessionVariables = rec {
       KEYTIMEOUT=1;
