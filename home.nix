@@ -105,19 +105,17 @@ in
       fzf-vim
 
       # Programming
-      vim-elm-syntax
       # markdown-preview
       vim-which-key
-      # python-syntax
       vim-haskellConcealPlus
-      vim-nix
+      vim-polyglot
+
       coc-nvim
       # coc-actions
       coc-eslint
       # coc-explorer
       coc-go
       coc-json
-      # coc-markdownlint
       coc-pairs
       coc-prettier
       coc-python
@@ -132,7 +130,6 @@ in
       vim-repeat
       vim-indent-object
 
-      # vim-floaterm
       vim-fugitive
       vim-gitgutter
     ];
