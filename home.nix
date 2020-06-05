@@ -1,11 +1,15 @@
 { config, lib, pkgs, ... }:
 
 let
+  # A colorfull ls package
   ls-colors = pkgs.runCommand "ls-colors" {} ''
     mkdir -p $out/bin
     ln -s ${pkgs.coreutils}/bin/ls $out/bin/ls
     ln -s ${pkgs.coreutils}/bin/dircolors $out/bin/dircolors
   '';
+
+  # Haskell IDE engine
+  all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
 in
 {
   home.packages = with pkgs; [
@@ -18,6 +22,7 @@ in
     docker
     docker-compose
     git
+    (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
     fzf
     # google-chrome
     jump
@@ -25,6 +30,7 @@ in
     ls-colors
     ngrok
     ripgrep
+    rnix-lsp
     nodejs
     # postman
     python3
