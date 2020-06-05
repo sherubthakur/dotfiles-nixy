@@ -40,11 +40,6 @@
       "trace.server": "verbose",
       "initializationOptions": {}
     },
-    "terraform": {
-      "command": "terraform-lsp",
-      "filetypes": ["terraform"],
-      "initializationOptions": {}
-    },
     "nix": {
       "command": "rnix-lsp",
       "filetypes": ["nix"]
