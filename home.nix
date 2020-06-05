@@ -166,6 +166,7 @@ in
     oh-my-zsh = {
     };
     initExtraBeforeCompInit = ''
+      ${builtins.readFile ./zsh/session_variables.zsh}
       ${builtins.readFile ./zsh/functions.zsh}
       ${builtins.readFile ./zsh/secrets.zsh}
 
@@ -178,22 +179,6 @@ in
     loginExtra = ''
       ${builtins.readFile ./zsh/prompt.zsh}
     '';
-    sessionVariables = rec {
-      KEYTIMEOUT=1;
-      DOTFILES="/Users/sherubthakur/.dotfiles";
-
-      PATH=":$HOME/.local/bin:/Users/sherubthakur/.nix-profile/bin:/Users/sherubthakur/Library/Python/3.7/bin:$PATH";
-
-      # Path to your oh-my-zsh installation.;
-      ZSH="/Users/sherubthakur/.oh-my-zsh";
-      NVIM_TUI_ENABLE_TRUE_COLOR=1;
-      EDITOR="nvim";
-      LC_ALL="en_US.UTF-8";
-      LANG="en_US.UTF-8";
-
-      SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt;
-      NIX_PATH="$HOME/.nix-defexpr/channels:nixpkgs=https://github.com/NixOS/nixpkgs/archive/release-19.03.tar.gz";
-    };
   };
 
 }
