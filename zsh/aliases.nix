@@ -1,8 +1,11 @@
 {
-
+  # I don't like the default but my hand just types it
   ":q"="exit";
   vi="nvim";
   vim="nvim";
+  top="ytop";
+  htop="ytop";
+  cat="bat";
 
   # docker-compose;
   dc="docker-compose";
@@ -46,8 +49,4 @@
 
   # Serve a folder
   servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'";
-
-  # system monitoring
-  top="ytop";
-  htop="ytop";
 }
