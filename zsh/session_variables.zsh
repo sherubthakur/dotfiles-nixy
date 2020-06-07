@@ -19,5 +19,5 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
 
-export PATH=":$HOME/.local/bin:/Users/sherubthakur/.nix-profile/bin:/Users/sherubthakur/Library/Python/3.7/bin:$PATH"
+export PATH=":$HOME/.local/bin:/Users/sherubthakur/.nix-profile/bin:$PATH"
 export NIX_PATH="$HOME/.nix-defexpr/channels:nixpkgs=https://github.com/NixOS/nixpkgs/archive/release-19.03.tar.gz"
