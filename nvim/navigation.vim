@@ -36,7 +36,7 @@ let g:sneak#prompt = '🔎'
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
-
+let g:fzf_tags_command = 'rg --files | ctags -R --links=no -L -'
 
 " Floating layout
 let g:fzf_layout = 
