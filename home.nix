@@ -24,6 +24,7 @@ in
     # _1password
     # NOTE: GUI apps don't show up in spotlight search
     alacritty
+    awscli
     bat
     clojure
     clojure-lsp
@@ -104,8 +105,8 @@ in
     plugins = with pkgs.vimPlugins; [
       # Appearance
       vim-airline
-      vim-one
       vim-devicons
+      awesome-vim-colorschemes
 
       # Navigation
       vim-tmux-navigator
