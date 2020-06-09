@@ -39,6 +39,14 @@ let g:which_key_map.a = {
             \ }
 
 
+let g:which_key_map.b = {
+            \ 'name' : '+buffers' ,
+            \ 'C' : [':w | %bd | e#'    , 'Close all other buffers'],
+            \ 'd' : [':bd'              , 'Close buffer'],
+            \ 'A' : [':bufdo bd'        , 'Close all buffer'],
+            \}
+
+
 " s is for search
 let g:which_key_map.s = {
             \ 'name' : '+Search' ,
