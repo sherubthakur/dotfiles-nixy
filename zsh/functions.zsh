@@ -42,6 +42,21 @@ function gstashnfix() {
     git stash pop
 } 
 
+function git-save-my-secret-commiting-ass() {
+    git filter-branch --force --index-filter \
+        "git rm --cached --ignore-unmatch $1" \
+         --prune-empty --tag-name-filter cat -- --all
+
+    echo $1 >> .gitignore
+
+    git push origin --force --all
+    git push origin --force --tags
+
+    git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+    git reflog expire --expire=now --all
+    git gc --prune=now
+}
+
 # Clean up python project of cache and stuff
 function pyclean () {
     find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
