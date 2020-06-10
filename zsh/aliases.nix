@@ -14,6 +14,7 @@
   dcisolated="docker-compose up --build --no-deps consul_common common-redis common_db";
 
   # Navigation;
+  ".."="cd ..";
   "..."="cd ../..";
   "...."="cd ../../..";
   "....."="cd ../../../..";
@@ -28,8 +29,6 @@
   gdpr="hub pull-request --draft";
   gppr="git push origin HEAD && hub pull-request";
   gpdpr="git push origin HEAD && hub pull-request --draft";
-  gdlocal="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d";
-  gdorigin="git branch -r --merged | grep -v master | sed 's/origin\//:/' | xargs -n 1 -P 5 git push origin";
   gsur="git submodule update --remote";
 
   # Grep;
@@ -39,10 +38,10 @@
   json="python -m json.tool";
 
   # You know (sudoing);
-  # If the last character of the value is a blank, then the next command word following the;
-  # is also checked for expansion.;
-  # So this is just a nice way of making sure your commands are evaluated for aliases before being;
-  # passed over to sudo, which ends up being pretty useful.;
+  # If the last character of the value is a blank, then the next command word following
+  # the; is also checked for expansion.; So this is just a nice way of making sure your
+  # commands are evaluated for aliases before being; passed over to sudo, which ends
+  # up being pretty useful.;
   sudo="sudo ";
   fucking="sudo ";
   holdmybeer="sudo ";

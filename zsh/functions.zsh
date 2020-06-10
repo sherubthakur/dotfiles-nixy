@@ -3,31 +3,38 @@ function dce() {
 }
 
 function dcpytest() {
-    docker-compose exec $1 /bin/bash -c 'pytest'
+    docker-compose exec $1 /bin/bash -c \
+        'pytest'
 }
 
 function dcpytestcov() {
-    docker-compose exec $1 /bin/bash -c 'pytest --cov='$2
+    docker-compose exec $1 /bin/bash -c \
+        'pytest --cov='$2
 }
 
 function dcpytestcovhtml() {
-    docker-compose exec $1 /bin/bash -c 'pytest --cov-report html --cov='$2
+    docker-compose exec $1 /bin/bash -c \
+        'pytest --cov-report html --cov='$2
 }
 
 function dcpytestlf() {
-    docker-compose exec $1 /bin/bash -c 'pytest --lf'
+    docker-compose exec $1 /bin/bash -c \
+        'pytest --lf'
 }
 
 function dcpytestni() {
-    docker-compose exec $1 /bin/bash -c "pytest -m 'not integration'"
+    docker-compose exec $1 /bin/bash -c \
+        "pytest -m 'not integration'"
 }
 
 function dcpytestnicov() {
-    docker-compose exec $1 /bin/bash -c "pytest --cov='$2' -m 'not integration'"
+    docker-compose exec $1 /bin/bash -c \
+        "pytest --cov='$2' -m 'not integration'"
 }
 
 function dcpytestnicovhtml() {
-    docker-compose exec $1 /bin/bash -c "pytest -m 'not integartion' --cov-report html --cov='$2'"
+    docker-compose exec $1 /bin/bash -c \
+        "pytest -m 'not integartion' --cov-report html --cov='$2'"
 }
 
 function gfix() {
