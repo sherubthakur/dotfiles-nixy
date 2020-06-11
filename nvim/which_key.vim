@@ -34,7 +34,7 @@ let g:which_key_map.a = {
             \ 'name' : '+actions' ,
             \ 'e' : [':CocCommand explorer'    , 'Explorer'],
             \ 's' : [':let @/ = ""'            , 'Remove search highlight'],
-            \ 't' : [':FloatermToggle'         , 'Terminal'],
+            \ 't' : [':TableModeToggle'        , 'Start/Stop Table Mode'],
             \ 'w' : [':set list!'              , 'Show/hide whitespace']
             \ }
 
@@ -82,16 +82,21 @@ let g:which_key_map.g = {
             \ 'a' : [':Git add .'                        , 'add all'],
             \ 'A' : [':Git add %'                        , 'add current'],
             \ 'b' : [':Git blame'                        , 'blame'],
-            \ 'c' : [':Git commit -m "autocommit"'       , 'commit'],
+            \ 'c' : {
+                \ 'name': '+Conflict Resolution',
+                \ 's' : [':Gdiffsplit!'                  , 'Start'],
+                \ 'h' : [':diffget //2'                  , 'Get hunk from left'],
+                \ 'l' : [':diffget //3'                  , 'Get hunk from right'],
+                \ 'f' : [':Gwrite!'                      , 'Finish'],
+                \ },
             \ 'd' : [':Git diff'                         , 'diff'],
-            \ 'D' : [':Gdiffsplit!'                       , 'diff split'],
             \ 'g' : [':GGrep'                            , 'grep'],
             \ 'G' : [':Gstatus'                          , 'status'],
-            \ 'h' : [':diffget //2'                      , 'Get hunk from left'],
+            \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
             \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
             \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'Next hunk'],
             \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'Prev hunk'],
-            \ 'l' : [':diffget //3'                      , 'Get hunk from right'],
+            \ 'l' : [':Git log'                          , 'log'],
             \ 'm' : [':Gdiff!'                           , 'Resolve conflicts view'],
             \ 'p' : [':Git push'                         , 'push'],
             \ 'P' : [':Git pull'                         , 'pull'],
@@ -99,7 +104,6 @@ let g:which_key_map.g = {
             \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
             \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
             \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
-            \ 'w' : [':Gwrite!'                          , 'Write file to index'],
             \ }
 
 " l is for language server protocol
