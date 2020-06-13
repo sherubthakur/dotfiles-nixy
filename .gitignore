@@ -2,3 +2,6 @@
 zsh/secrets.zsh
 
 result
+
+# IDE related stuff
+.vim/
