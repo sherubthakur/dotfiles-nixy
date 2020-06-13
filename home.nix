@@ -53,7 +53,10 @@ in
     elmPackages.elm-language-server
 
     # Haskell
+    ghc
     (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
+    haskellPackages.cabal-install
+    haskellPackages.stack
 
     # JavaScript
     nodejs
