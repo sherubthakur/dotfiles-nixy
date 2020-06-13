@@ -107,6 +107,7 @@ in
       vim-airline
       vim-devicons
       awesome-vim-colorschemes
+      vim-table-mode
 
       # Navigation
       vim-tmux-navigator
