@@ -21,28 +21,47 @@ let
 in
 {
   home.packages = with pkgs; [
-    # _1password
-    # NOTE: GUI apps don't show up in spotlight search
-    alacritty
+    # _1password # NOTE: GUI apps don't show up in spotlight search
+    alacritty # NOTE: GUI apps don't show up in spotlight search
+    tmux
     awscli
     bat
-    clojure
-    clojure-lsp
-    docker
-    docker-compose
-    elmPackages.elm-language-server
     git
-    (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
     fzf
     # google-chrome
     jump
-    # NOTE: custom
-    ls-colors
+    ls-colors # NOTE: custom
     ngrok
     ripgrep
-    rnix-lsp
-    nodejs
     # postman
+    # spaceship-prompt # NOTE: Need to add support for mac
+    universal-ctags
+    zsh-syntax-highlighting
+    ytop
+
+    # Docker
+    docker
+    docker-compose
+
+    # Programming
+
+    # Clojure
+    clojure
+    clojure-lsp
+
+    # Elm
+    elmPackages.elm-language-server
+
+    # Haskell
+    (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
+
+    # JavaScript
+    nodejs
+
+    # Nix
+    rnix-lsp
+
+    # python
     python3
     pipenv
     python3Packages.pip
@@ -55,12 +74,6 @@ in
     python3Packages.mypy
     python3Packages.flake8
     # python3Packages.flake8-annotations
-    # NOTE: Need to add support for mac
-    # spaceship-prompt
-    tmux
-    universal-ctags
-    zsh-syntax-highlighting
-    ytop
   ];
 
   # Let Home Manager install and manage itself.
