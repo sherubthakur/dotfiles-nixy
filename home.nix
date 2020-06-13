@@ -77,6 +77,10 @@ in
     python3Packages.mypy
     python3Packages.flake8
     # python3Packages.flake8-annotations
+
+    # Ruby
+    bundler
+    solargraph
   ];
 
   # Let Home Manager install and manage itself.
@@ -147,6 +151,7 @@ in
       coc-python
       coc-snippets
       coc-spell-checker
+      coc-solargraph
       coc-tsserver
       coc-yaml
 
