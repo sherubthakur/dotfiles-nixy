@@ -29,6 +29,7 @@ in
     git
     fzf
     # google-chrome
+    gitAndTools.gh
     jump
     ls-colors # NOTE: custom
     ngrok
@@ -76,6 +77,7 @@ in
     python3Packages.rope
     python3Packages.mypy
     python3Packages.flake8
+
     # python3Packages.flake8-annotations
 
     # Ruby
