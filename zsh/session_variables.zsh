@@ -10,14 +10,15 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 export KEYTIMEOUT=1
 
-export DOTFILES="/Users/sherubthakur/.dotfiles"
+export DOTFILES=~/.dotfiles
 
-export ZSH="/Users/sherubthakur/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 export EDITOR="nvim"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
 
-export PATH=":$HOME/.local/bin:/Users/sherubthakur/.nix-profile/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.nix-profile/bin:$PATH"
 export NIX_PATH="$HOME/.nix-defexpr/channels:nixpkgs=https://github.com/NixOS/nixpkgs/archive/release-19.03.tar.gz"
+export FPATH=~/.nix-profile/share/zsh/site-functions:$FPATH
