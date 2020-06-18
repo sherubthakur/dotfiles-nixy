@@ -37,7 +37,7 @@
   grep="grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
 
   # json formatting;
-  json="python -m json.tool";
+  json="python3 -m json.tool";
 
   # You know (sudoing);
   # If the last character of the value is a blank, then the next command word following
@@ -49,5 +49,5 @@
   holdmybeer="sudo ";
 
   # Serve a folder
-  servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'";
+  servethis="python3 -m http.server";
 }
