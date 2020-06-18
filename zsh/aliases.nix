@@ -34,7 +34,7 @@
   gsur="git submodule update --remote";
 
   # Grep;
-  grep="grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
+  grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
 
   # json formatting;
   json="python3 -m json.tool";
