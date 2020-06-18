@@ -242,6 +242,10 @@ in
 
       ${builtins.readFile ./zsh/prompt.zsh}
     '';
+    initExtra = ''
+      autoload bashcompinit && bashcompinit
+      complete -C aws_completer aws
+    '';
   };
 
 }
