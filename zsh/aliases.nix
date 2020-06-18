@@ -28,10 +28,9 @@
   gd="git diff";
   gdc="git diff --cached";
   gir="git rebase -i";
-  gpr="hub pull-request";
-  gdpr="hub pull-request --draft";
-  gppr="git push origin HEAD && hub pull-request";
-  gpdpr="git push origin HEAD && hub pull-request --draft";
+  gpr="gh pr create";
+  gdpr="gh pr create --draft";
+  gppr="git push origin HEAD && gh pr create --fill";
   gsur="git submodule update --remote";
 
   # Grep;
