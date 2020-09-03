@@ -50,6 +50,10 @@ in
     # Elm
     elmPackages.elm-language-server
 
+    # go
+    go
+    gopls
+
     # Haskell
     ghc
     haskellPackages.cabal-install
@@ -153,6 +157,7 @@ in
       coc-solargraph
       coc-tsserver
       coc-yaml
+      coc-go
 
       # Text objects
       tcomment_vim
