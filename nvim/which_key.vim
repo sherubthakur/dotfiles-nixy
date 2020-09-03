@@ -46,6 +46,18 @@ let g:which_key_map.b = {
             \ 'A' : [':bufdo bd'        , 'Close all buffer'],
             \}
 
+let g:which_key_map.c = {
+            \ 'name' : '+grammer' ,
+            \ 's' : [':GrammarousCheck'                           , 'Check for english errors'],
+            \ 'o' : ['<Plug>(grammarous-open-info-window)'        , 'Open info window under cursor'],
+            \ 'R' : ['<Plug>(grammarous-reset)'                   , 'Reset current check'],
+            \ 'f' : ['<Plug>(grammarous-fixit)'                   , 'Fix error under cursor'],
+            \ 'a' : ['<Plug>(grammarous-fixall)'                  , 'Fix all errors in current buffer'],
+            \ 'r' : ['<Plug>(grammarous-remove-error)'            , 'Remove error under cursor'],
+            \ 'd' : ['<Plug>(grammarous-disable-rule)'            , 'Disable the grammar rule'],
+            \ 'j' : ['<Plug>(grammarous-move-to-next-error)'      , 'Move to next error'],
+            \ 'k' : ['<Plug>(grammarous-move-to-previous-error)'  , 'Move to previous error'],
+            \}
 
 " s is for search
 let g:which_key_map.s = {

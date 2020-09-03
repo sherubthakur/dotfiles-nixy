@@ -143,6 +143,9 @@ in
       vim-sneak
       fzf-vim
 
+      # English
+      vim-grammarous
+
       # Programming
       # markdown-preview
       vim-which-key
