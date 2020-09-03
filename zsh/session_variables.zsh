@@ -14,11 +14,13 @@ export DOTFILES=~/.dotfiles
 
 export ZSH=~/.oh-my-zsh
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export BAT_THEME="OneHalfDark"
 export EDITOR="nvim"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
 
 export PATH="$HOME/.local/bin:$HOME/.nix-profile/bin:$PATH"
+# Add python site-packages to path
 export NIX_PATH="$HOME/.nix-defexpr/channels:nixpkgs=https://github.com/NixOS/nixpkgs/archive/release-19.03.tar.gz"
 export FPATH=~/.nix-profile/share/zsh/site-functions:$FPATH
