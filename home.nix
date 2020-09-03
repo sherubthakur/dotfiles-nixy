@@ -84,6 +84,12 @@ in
     # Ruby
     bundler
     solargraph
+
+    # rust
+    rustc
+    rls
+    cargo
+    rustfmt
   ];
 
   # Let Home Manager install and manage itself.
@@ -152,6 +158,7 @@ in
       coc-pairs
       coc-prettier
       coc-python
+      coc-rls
       coc-snippets
       coc-spell-checker
       coc-solargraph
