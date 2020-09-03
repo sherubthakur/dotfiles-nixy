@@ -64,6 +64,7 @@ in
     # python
     python3
     pipenv
+    poetry
     python3Packages.pip
     python3Packages.black
     python3Packages.ipython
@@ -73,7 +74,6 @@ in
     python3Packages.rope
     python3Packages.mypy
     python3Packages.flake8
-
     # python3Packages.flake8-annotations
 
     # Ruby
