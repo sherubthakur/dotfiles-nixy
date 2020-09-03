@@ -8,9 +8,6 @@ let
     ln -s ${pkgs.coreutils}/bin/dircolors $out/bin/dircolors
   '';
 
-  # Haskell IDE engine
-  all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
-
   # Tmux onedark theme
   github-tmux-onedark-src = pkgs.fetchFromGitHub {
     owner = "odedlaz";
@@ -55,7 +52,6 @@ in
 
     # Haskell
     ghc
-    (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
     haskellPackages.cabal-install
     haskellPackages.stack
 
