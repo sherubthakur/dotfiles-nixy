@@ -57,6 +57,7 @@ in
 
     # JavaScript
     nodejs
+    nodePackages.livedown
 
     # Nix
     rnix-lsp
