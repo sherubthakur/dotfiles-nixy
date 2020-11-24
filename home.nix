@@ -15,16 +15,17 @@ let
     rev = "3607ef889a47dd3b4b31f66cda7f36da6f81b85c";
     sha256 = "19jljshwp2p83b634cd1mw69091x42jj0dg40ipw61qy6642h2m5";
   };
+
 in
 {
   home.packages = with pkgs; [
     # _1password # NOTE: GUI apps don't show up in spotlight search
     alacritty # NOTE: GUI apps don't show up in spotlight search
     tmux
-    awscli
     bat
     git
     fzf
+    unrar
     # google-chrome
     gitAndTools.gh
     jump
@@ -35,7 +36,7 @@ in
     # spaceship-prompt # NOTE: Need to add support for mac
     universal-ctags
     zsh-syntax-highlighting
-    ytop
+    bottom
 
     # Docker
     docker
@@ -55,8 +56,6 @@ in
     gopls
 
     # Haskell
-    ghc
-    haskellPackages.cabal-install
     haskellPackages.stack
 
     # JavaScript
@@ -79,7 +78,6 @@ in
     python3Packages.rope
     python3Packages.mypy
     python3Packages.flake8
-    # python3Packages.flake8-annotations
 
     # Ruby
     bundler
@@ -155,7 +153,7 @@ in
       coc-nvim
       # coc-actions
       coc-eslint
-      # coc-explorer
+      coc-explorer
       coc-go
       coc-json
       coc-pairs
