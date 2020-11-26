@@ -7,7 +7,3 @@ colorscheme one
 highlight CocErrorSign ctermfg=204 guifg=#E06C75
 highlight CocWarningSign ctermfg=173 guifg=#D19A66
 highlight Pmenu ctermbg=237 guibg=#2e323b
-
-
-" Python Syntax highlight
-let g:python_highlight_all = 1

@@ -16,6 +16,8 @@ let
     sha256 = "19jljshwp2p83b634cd1mw69091x42jj0dg40ipw61qy6642h2m5";
   };
 
+  vimPlugsFromSource = (import ./nvim/plugins.nix) pkgs;
+
 in
 {
   home.packages = with pkgs; [
@@ -129,6 +131,17 @@ in
     enable = true;
     vimAlias = true;
 
+    package = pkgs.neovim-unwrapped.overrideAttrs(o: {
+      src = pkgs.fetchFromGitHub {
+        owner = "neovim";
+        repo = "neovim";
+        rev = "a6bd52d877875deecb65d367bca8eda5d89fb8bc";
+        sha256 = "1psd25awhlga5d0p7w2dgrh8r3iisa3cpf2a9z4l3kggzcgaym74";
+      };
+
+      buildInputs = o.buildInputs ++ [ pkgs.tree-sitter ];
+    });
+
     plugins = with pkgs.vimPlugins; [
       # Appearance
       vim-airline
@@ -138,14 +151,9 @@ in
 
       # Navigation
       vim-tmux-navigator
-      vim-sneak
       fzf-vim
 
-      # English
-      vim-grammarous
-
       # Programming
-      # markdown-preview
       vim-which-key
       vim-haskellConcealPlus
       vim-polyglot
@@ -170,11 +178,16 @@ in
       # Text objects
       tcomment_vim
       vim-surround
-      vim-repeat
-      vim-indent-object
 
       vim-fugitive
       vim-gitgutter
+
+      # vim-dadbod
+      vimspector
+
+      vimPlugsFromSource.nvim-treesitter
+      vimPlugsFromSource.nvim-treesitter-refactor
+      vimPlugsFromSource.nvim-treesitter-textobjects
     ];
 
     extraConfig = ''
@@ -183,6 +196,11 @@ in
       ${builtins.readFile ./nvim/navigation.vim}
       ${builtins.readFile ./nvim/theme.vim}
       ${builtins.readFile ./nvim/coc.vim}
+
+      lua << EOF
+        ${builtins.readFile ./nvim/treesitter.lua}
+      EOF
+
       ${builtins.readFile ./nvim/which_key.vim}
     '';
 
